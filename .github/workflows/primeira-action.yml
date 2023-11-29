@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para branch
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+# Definindo o  que queremos executar
+jobs:
+  exemplo: #Job: exemplo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run a one-line script
+        run: eacho Hello, world!
